@@ -57,6 +57,9 @@ public class Main {
         xmppManager           = new XmppManager(this, server, resource, port);
 
         init();
+
+        // keep program running until user aborts (CTRL-C)
+        for (;;) { try { Thread.sleep(500); } catch (InterruptedException e) {} }
     }
 
 
